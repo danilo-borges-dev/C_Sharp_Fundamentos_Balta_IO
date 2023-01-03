@@ -31,6 +31,11 @@ void Menu()
         multiplier = 60;
     }
 
+    if (type  == 'H')
+    {
+        multiplier = 60 * 60;
+    }
+
     if (type == '0')
     {
         Environment.Exit(0);
