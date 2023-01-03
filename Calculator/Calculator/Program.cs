@@ -3,7 +3,9 @@
 //Soma();
 //Subtracao();
 //Divisao();
-Multiplicacao();
+//Multiplicacao();
+
+Menu();
 
 void Soma()
 {
@@ -55,4 +57,40 @@ void Multiplicacao()
 
     float result = n1 * n2;
     Console.WriteLine($"Resultado da Multiplicação é {result.ToString("F2", CultureInfo.InvariantCulture)}");
+}
+
+void Menu()
+{
+    Console.Clear();
+
+    Console.WriteLine("------------------------");
+    Console.WriteLine("O que deseja fazer?");
+    Console.WriteLine("1 - Soma");
+    Console.WriteLine("2 - Subtração");
+    Console.WriteLine("3 - Multiplicação");
+    Console.WriteLine("4 - Divisão");
+    Console.WriteLine("------------------------");
+    Console.Write("Selecione uma opção: ");
+    short opcao = short.Parse(Console.ReadLine());
+
+    switch (opcao) 
+    {
+        case 1: 
+            Soma(); 
+            break;
+        case 2:
+            Subtracao();
+            break;
+        case 3:
+            Multiplicacao();
+            break;
+        case 4:
+            Divisao();
+            break;
+        default:
+            Console.WriteLine("Opção inválida!");
+            break;
+
+    }
+
 }
